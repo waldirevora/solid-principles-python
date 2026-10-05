@@ -1,33 +1,40 @@
 '''
-SINGLE RESPONSABILITY PRINCIPLE
+SINGLE RESPONSIBILITY PRINCIPLE
 
-Note que nessa classe, temos várias ações e responsabilidades. O que torna a manutenção, usabilidade e até a performance ruins.
+O código foi organizado seguindo o Princípio da Responsabilidade Única.
 
-Seguindo o conceito do Princípio da Responsabilidade única, organize essa classe e, se necessário, crie outras 
-classes com suas devidas responsabilidades.
-
+Cada classe possui uma responsabilidade específica, separando o gerenciamento
+de tarefas, a conexão com a API, o envio de notificações e a geração de relatórios.
 '''
 
+# Responsabilidade: conexão com a API
+class ApiConnection:
+    def connect_api(self):
+        pass
 
+
+# Responsabilidade: gerenciamento das tarefas
 class TaskHandler:
-    def conect_api():
+    def create_task(self):
         pass
 
-    def create_task():
+    def update_task(self):
         pass
 
-    def update_task():
+    def remove_task(self):
         pass
 
-    def remove_task():
+
+# Responsabilidade: envio de notificações
+class NotificationService:
+    def send_notification(self):
         pass
 
-    def send_notification():
+
+# Responsabilidade: geração e envio de relatórios
+class ReportService:
+    def generate_report(self):
         pass
 
-    def generate_report():
+    def send_report(self):
         pass
-
-    def send_report():
-        pass
-
