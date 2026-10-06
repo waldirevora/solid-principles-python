@@ -12,6 +12,7 @@ sem alterar a classe responsável pela aprovação.
 
 from abc import ABC, abstractmethod
 
+
 class Exame(ABC):
     @abstractmethod
     def verificar_condicoes(self):
@@ -33,11 +34,11 @@ class ExameRaioX(Exame):
     def verificar_condicoes(self):
         return True
 
+if __name__ == "__main__":
+    aprovador = AprovaExame()
 
-aprovador = AprovaExame()
+    exame_sangue = ExameSangue()
+    exame_raio_x = ExameRaioX()
 
-exame_sangue = ExameSangue()
-exame_raio_x = ExameRaioX()
-
-aprovador.aprovar_solicitacao_exame(exame_sangue)
-aprovador.aprovar_solicitacao_exame(exame_raio_x)
+    aprovador.aprovar_solicitacao_exame(exame_sangue)
+    aprovador.aprovar_solicitacao_exame(exame_raio_x)
